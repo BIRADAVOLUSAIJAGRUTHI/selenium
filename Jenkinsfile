@@ -10,14 +10,14 @@ pipeline {
         
         stage('Build') {
             steps {
-                echo 'This is the building stage'
+                echo 'This is building stage'
                 sh 'mvn clean package'
             }
         }
         
         stage('Test') {
             steps {
-                echo 'This is the testing stage'
+                echo 'This is testing stage'
                 sh 'mvn test'
             }
         }
@@ -25,14 +25,14 @@ pipeline {
         stage('Integration Test') {
             steps {
                 // Assuming you have Selenium tests in your project
-                echo 'This is the integration stage'
+                echo 'This is integration stage'
                 sh 'mvn verify'
             }
         }
         
         stage('Deploy') {
             steps {
-                echo 'This is the deployment stage' 
+                echo 'This is deployment stage' 
                 // Add deployment steps if applicable
             }
         }
